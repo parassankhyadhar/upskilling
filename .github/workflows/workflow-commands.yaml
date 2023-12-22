@@ -1,0 +1,9 @@
+name: workflow-commands
+on:
+    push:
+jobs:
+    first-job:
+        runs-on: ubuntu-latest
+        steps:
+            - name: "Setting a error message"
+              run: "::error:: THIS is A ERROR"
