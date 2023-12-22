@@ -24,4 +24,4 @@ jobs:
             - name: "Masking Value"
               run: echo "::add-mask::Secret String" # Value to be masked is Secret String
             - name: "Checking mask"
-              run: echo "Secret Sting"
+              run: echo "Secret String"
