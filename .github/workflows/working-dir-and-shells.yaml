@@ -4,6 +4,7 @@ on:
 defaults:
   run:
     shell: bash # All runners will run command only on bash.
+    #working-directory: # We can set the working directory.
 jobs:
   linux-job:
     runs-on: ubuntu-latest
@@ -28,9 +29,10 @@ jobs:
 #              echo $env:GITHUB_WORKSPACE
   windows-job: #Now the command will run on bash because we have set the default run shell as bash(Line 4)
     runs-on: windows-latest
-    # defaults: # we can set it on job level also.
-    #   run:
-    #     shell: bash
+    defaults: # we can set it on job level also.
+      run:
+        shell: bash
+        #working-directory: # We can set the working directory.
     steps:
       - name: display-working-dir-and-list-files-01
         run: |
@@ -41,4 +43,5 @@ jobs:
              echo $GITHUB_WORKSPACE
       - name: powershell command
         shell: pwsh # We can set it at step level also.
+        #working-directory: # We can set the working directory.
         run: $env:GITHUB_SHA
