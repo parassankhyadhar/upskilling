@@ -3,7 +3,7 @@ on:
   push:
 defaults:
   run:
-    bash
+    shell: bash # All runners will run command only on bash.
 jobs:
   linux-job:
     runs-on: ubuntu-latest
@@ -16,13 +16,23 @@ jobs:
              echo repo
              echo $GITHUN_REPOSITORY
              echo $GITHUB_WORKSPACE
-  windows-job:
+#   windows-job:         #Here the command will run on powershell by default. So we need to give powershell command
+#     runs-on: windows-latest
+#     steps:
+#       - name: display-working-dir-and-list-files-01
+#         run: |
+#              pwd
+#              ls
+#              echo $env:GITHUB_SHA
+#              echo $env:GITHUN_REPOSITORY
+#              echo $env:GITHUB_WORKSPACE
+  windows-job: #Now the command will run on bash because we have set the default run shell as bash(Line 4)
     runs-on: windows-latest
     steps:
       - name: display-working-dir-and-list-files-01
         run: |
              pwd
              ls
-             echo $env:GITHUB_SHA
-             echo $env:GITHUN_REPOSITORY
-             echo $env:GITHUB_WORKSPACE
+             echo $GITHUB_SHA
+             echo $GITHUN_REPOSITORY
+             echo $GITHUB_WORKSPACE
