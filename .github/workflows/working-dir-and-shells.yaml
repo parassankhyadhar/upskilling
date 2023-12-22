@@ -11,7 +11,7 @@ jobs:
              ls
              echo $GITHUB_SHA
              echo $GITHUN_REPOSITORY
-             evho $GITHUB_WORKSPACE
+             echo $GITHUB_WORKSPACE
   windows-job:
     runs-on: ubuntu-latest
     steps:
@@ -21,4 +21,4 @@ jobs:
              ls
              echo $GITHUB_SHA
              echo $GITHUN_REPOSITORY
-             evho $GITHUB_WORKSPACE
+             echo $GITHUB_WORKSPACE
