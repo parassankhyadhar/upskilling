@@ -1,6 +1,7 @@
 name: manual-checkout
 on:
     push:
+    workflow_dispatch: 
 jobs:
   first-job:
     runs-on: ubuntu-linux
