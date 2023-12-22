@@ -1,5 +1,7 @@
 name: first-workflow
-on: [push]
+on:
+  push:
+  workflow_dispatch:
 jobs:
   first-job:
     runs-on: ubuntu-latest
@@ -10,3 +12,14 @@ jobs:
          run: |
               echo "Hi"
               echo "Paras"
+  second-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo from second job
+        run: echo "Hello second job."
+  third-job:
+    needs: first-job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo from thired job
+        run: echo "Hello Third job"
