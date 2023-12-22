@@ -28,6 +28,9 @@ jobs:
 #              echo $env:GITHUB_WORKSPACE
   windows-job: #Now the command will run on bash because we have set the default run shell as bash(Line 4)
     runs-on: windows-latest
+    # defaults: # we can chage it on job level also.
+    #   run:
+    #     shell: bash
     steps:
       - name: display-working-dir-and-list-files-01
         run: |
@@ -36,3 +39,6 @@ jobs:
              echo $GITHUB_SHA
              echo $GITHUN_REPOSITORY
              echo $GITHUB_WORKSPACE
+      - name: powershell command
+        shell: pwsh
+        run: $env=GITHUB_SHA
