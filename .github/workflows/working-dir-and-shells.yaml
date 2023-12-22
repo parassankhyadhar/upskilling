@@ -1,6 +1,9 @@
 name: working-dir-and-shells
 on: 
   push:
+defaults:
+  run:
+    bash
 jobs:
   linux-job:
     runs-on: ubuntu-latest
