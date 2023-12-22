@@ -20,6 +20,6 @@ jobs:
         run: |
              pwd
              ls
-             echo $GITHUB_SHA
-             echo $GITHUN_REPOSITORY
-             echo $GITHUB_WORKSPACE
+             echo $env:GITHUB_SHA
+             echo $env:GITHUN_REPOSITORY
+             echo $env:GITHUB_WORKSPACE
