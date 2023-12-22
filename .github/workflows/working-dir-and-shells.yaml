@@ -16,7 +16,7 @@ jobs:
   windows-job:
     runs-on: windows-latest
     steps:
-      - name: display-working-dir-and-list-files
+      - name: display-working-dir-and-list-files-01
         run: |
              pwd
              ls
