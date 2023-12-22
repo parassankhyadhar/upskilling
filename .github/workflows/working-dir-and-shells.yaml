@@ -8,13 +8,13 @@ jobs:
       - name: display-working-dir-and-list-files
         run: |
              pwd
-             ls
+             ls /home/runner
              echo $GITHUB_SHA
              echo repo
              echo $GITHUN_REPOSITORY
              echo $GITHUB_WORKSPACE
   windows-job:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - name: display-working-dir-and-list-files
         run: |
