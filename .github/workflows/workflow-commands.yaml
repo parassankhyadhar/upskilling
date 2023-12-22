@@ -11,3 +11,7 @@ jobs:
               run: echo "::error title=Error title,file=app-workflow-commands.js,line=2,endLine=3,col=5,endColum=7::MIssig Semicolon" #using this you can point to a file also
             - name: "DEBUG message"
               run: echo "::debug title=Debug Title,file=app-workflow-commands.js,line=2,endLine=3,col=3,endColum=7::Please debug"
+            - name: "WARNING message"
+              run: echo "::warning title=Warning Title,file=app-workflow-commands.js,line=2,endLine=3,col=3,endColum=7::Please debug"
+            - name: "Notice message"
+              run: echo "::notice title=Notice Title,file=app-workflow-commands.js,line=2,endLine=3,col=3,endColum=7::Please debug"
