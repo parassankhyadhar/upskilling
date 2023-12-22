@@ -10,6 +10,7 @@ jobs:
              pwd
              ls
              echo $GITHUB_SHA
+             echo repo
              echo $GITHUN_REPOSITORY
              echo $GITHUB_WORKSPACE
   windows-job:
