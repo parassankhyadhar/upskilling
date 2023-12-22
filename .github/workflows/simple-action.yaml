@@ -12,4 +12,4 @@ jobs:
         with:
             who-to-greet: Paras
       - name: Output time
-        run: echo ""${{ steps.greet.outputs.time }}""
+        run: echo "${{ steps.greet.outputs.time }}"
