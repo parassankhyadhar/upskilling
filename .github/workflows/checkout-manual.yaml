@@ -8,8 +8,8 @@ jobs:
     steps:
       - name: Before checkout
         run: ls -a
-      - name: Checkingout
-        run: git clone https://$MY_GITHUB_USERNAME:${{secrets.MY_GITHUB_TOKEN}}@github.com/parassankhyadhar/upskilling.git
-      - name: After cloning
-        run: |
-          ls -a
+    #   - name: Checkingout
+    #     run: git clone https://$MY_GITHUB_USERNAME:${{secrets.MY_GITHUB_TOKEN}}@github.com/parassankhyadhar/upskilling.git
+    #   - name: After cloning
+    #     run: |
+    #       ls -a
