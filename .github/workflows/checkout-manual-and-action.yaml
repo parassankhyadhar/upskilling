@@ -3,7 +3,7 @@ on:
     push:
     workflow_dispatch: 
 jobs:
-  first-job:
+  Manual-Clone:
     runs-on: ubuntu-latest
     steps:
       - name: Before checkout
@@ -14,4 +14,13 @@ jobs:
         run: |
           cd upskilling
           ls -a
+  Using-Action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Before checkout
+        run: ls -a
+      - name: Ceckout Action
+        uses: actions/checkout@v4
+      - name: After cloning
+        run: ls -a
           
