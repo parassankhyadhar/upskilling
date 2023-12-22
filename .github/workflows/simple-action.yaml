@@ -1,0 +1,12 @@
+name: hello-from-js
+on:
+  push:
+  workflow_dispatch:
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hello form js
+        uses: actions/hello-world-javascript-action@main #after @ you can point to branch, version or a commit
+        with:
+            who-to-greet: Paras
