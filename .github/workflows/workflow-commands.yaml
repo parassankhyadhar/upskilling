@@ -5,7 +5,9 @@ jobs:
     first-job:
         runs-on: ubuntu-latest
         steps:
-            - name: "Setting a error message"
+            - name: "ERROR message"
               run: echo "::error::THIS is A ERROR"
-            - name: "Setting Error message with parameters"
-              run: echo "::error title=Error title,file=app-workflow-commands.js,line=2,endLine=3,col=5,endColum=7::MIssig Semicolon"
+            - name: "Error message with TITLE parameter"
+              run: echo "::error title=Error title,file=app-workflow-commands.js,line=2,endLine=3,col=5,endColum=7::MIssig Semicolon" #using this you can point to a file also
+            - name: "DEBUG message"
+              run: echo "::debug title=Debug Title,file=app-workflow-commands.js,line=2,endLine=3,col=3,endColum=7::Please debug"
