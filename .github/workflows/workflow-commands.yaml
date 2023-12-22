@@ -8,4 +8,4 @@ jobs:
             - name: "Setting a error message"
               run: echo "::error::THIS is A ERROR"
             - name: "Setting Error message with parameters"
-              run: echo "::echo title::Error title, file=app.js, line=2, endLine=3, col=5, endColoum=7::Missing Semicalan""
+              run: echo "::echo title=Error title, file=app.js, line=2, endLine=3, col=5, endColoum=7::Missing Semicalan""
