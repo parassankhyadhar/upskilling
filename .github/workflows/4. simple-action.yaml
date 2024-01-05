@@ -7,8 +7,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Hello form JS
-        id: greet #TO get the output you have givr this id which can be use as reference in output.
-        uses: actions/hello-world-javascript-action@main #after @ you can point to branch, version or a commit
+        id: greet #TO get the output you have give this id which can be use as reference in output.
+        uses: actions/hello-world-javascript-action@main #after @ you can point to branch, version or a commit.
         with:
             who-to-greet: Paras
       - name: Output time
