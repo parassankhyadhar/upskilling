@@ -1,0 +1,10 @@
+name: workflow-run
+on: 
+    workflow_run: 
+        workflows: [first-workflow] # This push-pullreq-issues-activitytypeworkflow only run after thr compltion of first-workflow.
+        types: [completed]
+jobs:
+    demo-script:
+        runs-on: ubuntu-linux
+        steps:
+            - run: echo "Hello World"
