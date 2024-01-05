@@ -2,7 +2,7 @@ name: push-pullreq-issues-activitytype
 on: 
     push:
     pull_request:
-        types: [opened, assigned, reopened, synchronize] 
+        types: [opened, assigned, reopened] 
     issues: 
         types: [opened]
 jobs:
