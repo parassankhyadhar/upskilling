@@ -3,7 +3,7 @@ on:
     workflow_run: 
         workflows: [first-workflow] # This push-pullreq-issues-activitytypeworkflow only run after thr compltion of first-workflow.
         types: [completed]
-    push: #Event 
+    #push: #Event 
     pull_request: #Event
         types: [opened, assigned, reopened, synchronize] #Activity Type
     issues: #Event
