@@ -1,7 +1,7 @@
 name: push-pullreq-issues-activitytype
 on: 
     workflow_run: 
-        workflows: [first-workflow] # this push-pullreq-issues-activitytypeworkflow only run after thr compltion of first-workflow.
+        workflows: [first-workflow] # This push-pullreq-issues-activitytypeworkflow only run after thr compltion of first-workflow.
         types: [completed]
     push: #Event 
     pull_request: #Event
